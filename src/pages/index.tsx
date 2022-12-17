@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Home: NextPage = () => {
   return (
@@ -54,6 +54,14 @@ const FACES = [
 function Avatar() {
   const [curFaceIdx, setCurFaceIdx] = useState<number>(0);
   const imgUrl = `/faces/${FACES[curFaceIdx]}`;
+
+  // preload all the faces when we mount
+  useEffect(() => {
+    FACES.forEach((face) => {
+      const img = new Image();
+      img.src = `/faces/${face}`;
+    });
+  }, []);
 
   const onClick = () => {
     setCurFaceIdx(Math.floor(Math.random() * FACES.length));
