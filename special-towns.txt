@@ -1,0 +1,19 @@
+Towns that have a cardinal direction and end in up
+
+East Munglinup
+East Nannup
+North Boyanup
+North Burngup
+North Dandalup
+North Yunderup
+South Yunderup
+West Coolup
+
+--
+
+Towns with cardinal direction that also have a town without the direction
+
+East Munglinup
+East Nannup
+North Boyanup
+West Coolup
