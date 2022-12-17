@@ -4,7 +4,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import React, { useEffect, useRef, useState } from "react";
 
-const ROUND_TIME_SECS = 10;
+const ROUND_TIME_SECS = 300;
 
 type Guess = {
   type: "correct" | "incorrect" | "repeat";
